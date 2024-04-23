@@ -11,7 +11,8 @@ const INITIAL_STATE = {
     initialState: INITIAL_STATE,
     reducers: {
       setFilterName(state, action) {
-        state.name = action.payload;
+
+        return state.name = action.payload;
       },
       
     },

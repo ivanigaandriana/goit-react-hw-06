@@ -7,8 +7,8 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
     key: 'contacts',
     storage,
-    whitelist: ['contacts'],
-    blacklist:['_persist']
+    whitelist: ['items'],
+   
 }
 export const store = configureStore({
     reducer: {

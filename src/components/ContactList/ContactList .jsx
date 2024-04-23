@@ -3,12 +3,14 @@ import Contact from "../Contact/Contact";
 import { useSelector } from "react-redux";
 import { selectContacts} from "../../redux/contactsSlice";
 import { selectFilterName } from "../../redux/filtersSlice";
+import createPersistoid from "redux-persist/es/createPersistoid";
 
 const ContactList=() =>{
 
 const filter = useSelector(selectFilterName);
 const contacts = useSelector(selectContacts);
-const filterContacts = contacts.filter((contact) => {
+// console.log (contacts); 
+const filterContacts = contacts.filter((contact) => { 
   const nameIncludes = contact.name.toLowerCase().includes(filter.toLowerCase());
   const numberIncludes = typeof contact.number === 'string' && contact.number.toLowerCase().includes(filter.toLowerCase());
   return nameIncludes || numberIncludes;
