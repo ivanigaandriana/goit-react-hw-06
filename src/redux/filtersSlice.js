@@ -10,9 +10,8 @@ const INITIAL_STATE = {
     name: 'filters',
     initialState: INITIAL_STATE,
     reducers: {
-      setFilterName(state, action) {
-
-        return state.name = action.payload;
+      setFilterName(state, action) { 
+        state.name = action.payload;
       },
       
     },
